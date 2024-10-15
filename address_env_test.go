@@ -14,7 +14,7 @@ func TestParseAddressesFromEnvWhenEnvIsSet(t *testing.T) {
 	err := os.Setenv(key, "zookeeper-0:2181,zookeeper-1:2181")
 	require.NoError(t, err)
 
-	expected := []*Address{
+	expected := []Address{
 		{Host: "zookeeper-0", Port: 2181},
 		{Host: "zookeeper-1", Port: 2181},
 	}
